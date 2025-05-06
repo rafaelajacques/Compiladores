@@ -1,0 +1,34 @@
+# Arquivos compilados Java
+*.class
+
+# Pastas comuns de build
+bin/
+out/
+build/
+
+# Configurações do VS Code
+.vscode/
+
+# Logs e temporários
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos gerados por testes
+*.coverage
+TestResult*
+
+# Evita incluir pastas locais que não fazem parte do código
+.idea/
+*.iml
+
+# Se você eventualmente usar Maven/Gradle (Java)
+target/
+*.jar
+*.war
+*.ear
