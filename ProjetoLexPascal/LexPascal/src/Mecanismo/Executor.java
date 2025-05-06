@@ -156,7 +156,7 @@ public class Executor {
     }
 
     public void AnalisarMontandoTabelaSimbolos() {
-        // Tabela de palavras reservadas da linguagem
+   
         HashMap<String, String> tabelaLinguagem = new HashMap<>();
         tabelaLinguagem.put("program", "PALAVRA_RESERVADA");
         tabelaLinguagem.put("begin", "PALAVRA_RESERVADA");
@@ -198,7 +198,7 @@ public class Executor {
                 descricao = "Token não reconhecido";
             }
     
-            // Cria o token e adiciona à tabela do programa somente se for identificador
+            
             Token token = new Token(lexema, lexema, tipo, descricao, endereco++);
     
             if (tipo.equals("IDENTIFICADOR") && !tabelaSimbolosPrograma.containsKey(lexema)) {
