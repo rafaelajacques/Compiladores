@@ -155,18 +155,51 @@ public class Executor {
         System.out.println("----------------------------------------");        
     }
 
-    public void AnalisarMontandoTabelaSimbolos() {
-   
+    public void AnalisarMontandoTabelaSimbolos(){
         HashMap<String, String> tabelaLinguagem = new HashMap<>();
         tabelaLinguagem.put("program", "PALAVRA_RESERVADA");
         tabelaLinguagem.put("begin", "PALAVRA_RESERVADA");
         tabelaLinguagem.put("end", "PALAVRA_RESERVADA");
         tabelaLinguagem.put("var", "PALAVRA_RESERVADA");
-        tabelaLinguagem.put("integer", "TIPO");
-        tabelaLinguagem.put("real", "TIPO");
+        tabelaLinguagem.put("const", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("type", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("array", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("of", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("record", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("procedure", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("function", "PALAVRA_RESERVADA");
         tabelaLinguagem.put("if", "PALAVRA_RESERVADA");
         tabelaLinguagem.put("then", "PALAVRA_RESERVADA");
         tabelaLinguagem.put("else", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("while", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("do", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("for", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("to", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("downto", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("repeat", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("until", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("case", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("write", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("writeln", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("read", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("readln", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("with", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("goto", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("label", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("and", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("or", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("not", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("div", "PALAVRA_RESERVADA");
+        tabelaLinguagem.put("mod", "PALAVRA_RESERVADA");
+    
+        tabelaLinguagem.put("integer", "TIPO");
+        tabelaLinguagem.put("real", "TIPO");
+        tabelaLinguagem.put("boolean", "TIPO");
+        tabelaLinguagem.put("char", "TIPO");
+        tabelaLinguagem.put("string", "TIPO");
+    
+        tabelaLinguagem.put("true", "BOOLEANO");
+        tabelaLinguagem.put("false", "BOOLEANO");
     
         this.tabelaSimbolosPrograma = new HashMap<>();
         int endereco = 0;
@@ -198,7 +231,6 @@ public class Executor {
                 descricao = "Token não reconhecido";
             }
     
-            
             Token token = new Token(lexema, lexema, tipo, descricao, endereco++);
     
             if (tipo.equals("IDENTIFICADOR") && !tabelaSimbolosPrograma.containsKey(lexema)) {
@@ -210,8 +242,8 @@ public class Executor {
     
         System.out.println("----------------------------------------");
     }
-
-    public void ImprimirTabelaSimbolosPrograma() {
+    
+    public void ImprimirTabelaSimbolosPrograma(){
         System.out.println("----------------------------------------");
         System.out.println("##### Tabela de Símbolos do Programa #####");
     
