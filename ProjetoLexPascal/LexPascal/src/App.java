@@ -8,7 +8,7 @@ public class App {
 
         Executor exec = new Executor();
         // motor.CarregarArquivo();
-        exec.CarregarArquivo("C:\\Meus testes\\teste.pas");
+        exec.CarregarArquivo("Pascal/Saudacao.pas");
         exec.ProcessarBufferPrimario();
         exec.ImprimirBufferPrimario();
         exec.ProcessarBufferSecundario();
